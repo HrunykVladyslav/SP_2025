@@ -1,0 +1,25 @@
+program PRG;
+begin var int32 AAA, BBB, CYA, CYB, XVL;
+read (AAA);
+read (BBB);
+
+AAA -> CYA;
+while (CYA lt(BBB add 1)) {
+    (CYA * CYA) -> XVL;
+    write (XVL);
+    (CYA add 1) -> CYA;
+}
+
+0 -> XVL;
+1 -> CYA;
+while (CYA lt(AAA add 1)) {
+    1 -> CYB;
+    while (CYB lt(BBB add 1)) {
+        (XVL add 1) -> XVL;
+        (CYB add 1) -> CYB;
+    }
+    (CYA add 1) -> CYA;
+}
+write (XVL);
+
+end
