@@ -1,4 +1,3 @@
-
 #define _CRT_SECURE_NO_WARNINGS
 #define WIN32_LEAN_AND_MEAN
 /************************************************************************
@@ -377,8 +376,7 @@ void removing_unreachable_DFA_states(int* dead_state, int* nextFreeState) {
                           ";"\
                           "|->"\
                           "|=="\
-                          "|!="\
-                          "|!"\
+                          "|!(^|=)"\
                           "|&"\
                           "|||"\
                           "|add"\
@@ -478,8 +476,7 @@ void removing_unreachable_DFA_states(int* dead_state, int* nextFreeState) {
                           ";"\
                           "|->"\
                           "|=="\
-                          "|!="\
-                          "|!"\
+                          "|!(^|=)"\
                           "|&"\
                           "|||"\
                           "|add"\
@@ -667,4 +664,5 @@ int main() {
     (void)getchar();
 #endif
 }
+
 
