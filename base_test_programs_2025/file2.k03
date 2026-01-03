@@ -1,0 +1,34 @@
+program PRG;
+begin var int32 AAA, BBB, CCC, MAX;
+read (AAA);
+read (BBB);
+read (CCC);
+
+if ( AAA gt BBB ) & (AAA gt CCC) {
+	AAA -> MAX;
+} else if (BBB gt AAA) & (BBB gt CCC) {
+	BBB -> MAX;	
+} else {
+	CCC -> MAX;
+}
+write (MAX);
+
+if (AAA == BBB) & (AAA == CCC) & (BBB == CCC) {
+   write (1);
+}  else {
+   write (0);
+}
+
+if (AAA lt 0) | (BBB lt 0) | (CCC lt 0)  {
+   write(sub 1);
+}  else {
+   write(0);
+}
+
+if ! (AAA lt (BBB add CCC)) {
+   write(10);
+}  else {
+   write(0);
+}
+
+end
